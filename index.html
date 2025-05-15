@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tron Game</title>
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+  <body>
+    <div id="game-container">
+      <div id="start-menu" class="menu">
+        <h1>Tron Game</h1>
+        <div class="player-info">
+          <label for="initial-player-name">Enter Your Name:</label>
+          <input type="text" id="initial-player-name" maxlength="15" placeholder="Player">
+        </div>
+        <button id="start-button">Start Game</button>
+        <div id="leaderboard-container" class="leaderboard-section">
+          <h2>Leaderboard</h2>
+          <div id="leaderboard-entries">
+            <!-- Leaderboard entries will be populated here -->
+            <p class="no-scores">No scores yet. Be the first to play!</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="game-area">
+        <!-- Canvas will be inserted here -->
+        <div id="level-info" class="info hidden">
+          <span>Level: <span id="level-display">1</span></span>
+          <span>Score: <span id="score-display">0</span></span>
+          <span>Player: <span id="player-name-display">Player</span></span>
+        </div>
+      </div>
+      
+      <div id="game-over-menu" class="menu hidden">
+        <h1>Game Over</h1>
+        <p id="winner-message"></p>
+        <p>Level: <span id="current-level">1</span></p>
+        <p>Score: <span id="final-score">0</span></p>
+        <div class="game-buttons">
+          <button id="restart-button">Restart</button>
+          <button id="next-level-button" class="hidden">Next Level</button>
+        </div>
+        <div id="game-over-leaderboard" class="leaderboard-section">
+          <h2>Leaderboard</h2>
+          <div id="leaderboard-entries-game-over">
+            <!-- Leaderboard entries will be populated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-height: 600px;
+  position: relative;
+}
+
+#game-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+canvas {
+  border: 2px solid #fff;
+  display: none;
+  margin: 0 auto;
+}
+
+.menu {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  border: 2px solid #333;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.player-info {
+  margin: 20px 0;
+}
+
+#initial-player-name {
+  padding: 8px;
+  margin: 0 10px;
+  background: #222;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 4px;
+}
+
+.leaderboard-section {
+  margin-top: 30px;
+  padding: 15px;
+  border-top: 1px solid #333;
+}
+
+.leaderboard-section h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+#leaderboard-entries {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.leaderboard-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: 1px solid #333;
+}
+
+.leaderboard-entry:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.name-entry {
+  margin: 20px 0;
+}
+
+#player-name {
+  padding: 8px;
+  margin: 0 10px;
+  background: #222;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 4px;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.info {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 10;
+  width: auto;
+  white-space: nowrap;
+}
+
+.info span {
+  margin-right: 15px;
+}
+
+#next-level-button {
+  background-color: #28a745;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#next-level-button:hover {
+  background-color: #218838;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #000; /* Keep dark background even in light mode */
+  }
+  a:hover {
+    color: #747bff;
+  }
+  /* Remove the button background override so buttons stay dark themed */
+}
