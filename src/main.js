@@ -151,6 +151,12 @@ let winner = '';
 // Load leaderboard on startup
 loadLeaderboard();
 
+// Load saved player name from localStorage if available
+const savedDisplayName = localStorage.getItem('tronDisplayName');
+if (savedDisplayName) {
+    initialPlayerNameInput.value = savedDisplayName;
+}
+
 // Key controls
 window.addEventListener('keydown', (e) => {
     switch(e.key) {
